@@ -1,0 +1,63 @@
+
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+  <nav class="navbar navbar-expand-lg navbar-expand-md bg-white fixed-top">
+    <div class="collapse container-fluid navbar-collapse" id="navbarsExample02">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <img src="https://uc.uxpin.com/files/837400/831059/logo-af489e.png" width="250" height="40" alt="">
+          </a>
+        </li>
+      </ul>
+      <ul id="sidebarCollapse" class="navbar-nav ">
+        <div class="toggle-wrap">
+          <span class="toggle-bar" (click)="sidenav.toggle()"></span>
+        </div>
+      </ul>
+      <ul id="navb" class="navbar-nav my-2 my-md-0">
+        <li class="nav-item active">
+          <a href="">
+            <div>Components</div>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="">
+            <div>Blogs</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <mat-sidenav-container class="example-sidenav-container" style="margin-top:20px;">
+    <mat-sidenav #sidenav [mode]="navMode" opened="true"  style="border-right: 1px solid #c6d0da;height: 100vh;width: 230px;padding: 10px;">
+      <mat-nav-list>
+        <form class="searchform">
+          <mat-form-field class="example-full-width">
+            <input matInput [(ngModel)]="searchInput" (input)="onSearch($event.target.value)" name="searchInput" placeholder="Search"
+              value="">
+          </mat-form-field>
+        </form>
+        <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+          <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle matTreeNodePadding style="padding-left:45px;">
+            <!-- <button mat-icon-button></button> -->
+            <a style="cursor: pointer;" (click)="onMenuClick(node)">{{node.filename}}</a>
+          </mat-tree-node>
+
+          <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding style="padding-left:30px;">
+            <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'toggle ' + node.filename">
+              <mat-icon class="mat-icon-rtl-mirror expansionIcons">
+                {{treeControl.isExpanded(node) ? 'remove' : 'add'}}
+              </mat-icon>
+            </button>
+            {{node.filename}}
+          </mat-tree-node>
+        </mat-tree>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
