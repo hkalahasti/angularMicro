@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule,ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes} from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
@@ -26,6 +26,11 @@ import { CovalentNotificationsModule } from '@covalent/core/notifications';
 import { CovalentMessageModule } from '@covalent/core/message';
 import { PrismModule } from '@ngx-prism/core';
 import { DocsExampleModule } from '@ngx-docs/example'; // added
+
+import {EShareDataService} from './e-sharedata.service';
+import { ECustomIconService } from './e-custom-icon.service';
+import { FilterPipe, KeyValuesPipe, DecodeURIPipe, DatePipe, DateTimePipe, FlagPipe, CurrencyPipe } from './utils/pipes';
+
 import {
   MatAutocompleteModule,
   MatBadgeModule,
@@ -193,6 +198,16 @@ import {AgmCoreModule  } from '@agm/core';
     DocsExampleModule,
     PrismModule
   ],
-  declarations: []
+  declarations: [FilterPipe, KeyValuesPipe, DecodeURIPipe, DatePipe, DateTimePipe, FlagPipe, CurrencyPipe],
+  providers : []
 })
-export class EMatSharedModule { }
+export class ESharedModule { 
+  static forRoot(): ModuleWithProviders {
+    return {
+        ngModule: ESharedModule,
+        providers: [
+          EShareDataService,ECustomIconService
+        ],
+    };
+}
+}

@@ -1,10 +1,10 @@
-import { EMatSharedModule } from './e-shared-mat.module';
+import { ESharedModule } from './e-shared.module';
 
 describe('EMatSharedModule', () => {
-  let eSharedMatModule: EMatSharedModule;
+  let eSharedMatModule: ESharedModule;
 
   beforeEach(() => {
-    eSharedMatModule = new EMatSharedModule();
+    eSharedMatModule = new ESharedModule();
   });
 
   it('should create an instance', () => {

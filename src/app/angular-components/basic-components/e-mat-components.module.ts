@@ -1,7 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { EMatSharedModule } from '../../e-shared/e-shared-mat.module';
+import { ESharedModule } from '../../e-shared/e-shared.module';
 import {
   EMatDatePickerComponent, EMatTimepickerComponent,
   EMatSpinnerComponent, EMatTabsComponent,
