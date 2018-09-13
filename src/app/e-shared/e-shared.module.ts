@@ -199,7 +199,7 @@ import {AgmCoreModule  } from '@agm/core';
     PrismModule
   ],
   declarations: [FilterPipe, KeyValuesPipe, DecodeURIPipe, DatePipe, DateTimePipe, FlagPipe, CurrencyPipe],
-  providers : []
+  providers : [EShareDataService,ECustomIconService]
 })
 export class ESharedModule { 
   static forRoot(): ModuleWithProviders {

@@ -24,7 +24,7 @@ import {
 
 @NgModule({
   imports: [
-    EMatSharedModule,
+    ESharedModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [],

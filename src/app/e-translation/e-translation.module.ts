@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { ETranslationComponent } from './e-translation.component';
-import { EMatSharedModule } from '../e-shared';
+import { ESharedModule } from '../e-shared';
 import { YandexService } from './e-service/e-translation.service';
 
 @NgModule({
   imports: [
-    EMatSharedModule
+    ESharedModule
   ],
   exports: [
   ],

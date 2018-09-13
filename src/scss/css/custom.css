@@ -327,6 +327,11 @@ html {
     height: 300px;
     overflow-x: scroll
   }
+  ngx-prism > pre {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: none;
+  }
   pre code > * {
     font-family: 'Open Sans', sans-serif !important;
   }

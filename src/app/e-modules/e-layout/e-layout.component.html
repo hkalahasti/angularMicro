@@ -1,44 +1,16 @@
 <div class="row mar-top">
   <div class="card col-md-9 mar-left">
-    <div class="card-header">
-      <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item">
-          <a class="nav-link active" id="material-Component" data-toggle="tab" href="#materialComponent" role="tab" aria-controls="materialComponent"
-            aria-selected="true">Material Component</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="material-ComponentCode" data-toggle="tab" href="#materialComponentCode" role="tab" aria-controls="materialComponentCode"
-            aria-selected="false">Code</a>
-        </li>
-      </ul>
+      <mat-tab-group>
+        <mat-tab label="Demo">  
+          <router-outlet name="basic"></router-outlet> 
+        </mat-tab>
+        <mat-tab label="Code">
+            <mat-tab-group >
+                <mat-tab label="HTML" *ngIf="code.html"><ngx-prism [language]="'html'" [code]="code.html.content"></ngx-prism></mat-tab>
+                <mat-tab label="TS" *ngIf="code.ts" ><ngx-prism [language]="'javascript'" [code]="code.ts.content"></ngx-prism></mat-tab>
+                <mat-tab label="CSS" *ngIf="code.css" ><ngx-prism [language]="'css'" [code]="code.css.content"></ngx-prism></mat-tab>
+            </mat-tab-group>
+        </mat-tab> 
+      </mat-tab-group>
     </div>
-    <div class="card-body">
-      <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="materialComponent" role="tabpanel" aria-labelledby="material-Component">
-          <router-outlet name="basic"></router-outlet>
-        </div>
-        <div class="tab-pane fade" id="materialComponentCode" role="tabpanel" aria-labelledby="material-ComponentCode">
-          <!-- <router-outlet name="basic"></router-outlet> -->
-          <!-- <p>Coming soon</p> -->
-          <!-- <div class="bd-clipboard">
-            <button (click)="copyToClipboard('someCode')" class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button>
-          </div>
-          <div highlight="all">
-              <aio-code>
-           
-            <pre><code [textContent]="someCode"></code></pre>
-          </aio-code>
-          </div> -->
-          <ngx-prism
-[language] = "language"
-[hooks] = "hooks"
-[code] = "content"
-[interpolation] = "interpolate"
->
-</ngx-prism>
-        </div>
-      </div>
-    </div>
-    <!-- <div class="card-footer">Basic Component</div> -->
-  </div>
 </div>
