@@ -10,6 +10,7 @@
       <img src="https://uc.uxpin.com/files/837400/831059/logo-af489e.png" width="250" height="40" alt="">
     </span>
     <span class="spacer"></span>
+    
   </mat-toolbar>
   
 
@@ -22,19 +23,20 @@
               value="">
           </mat-form-field>
         </form> -->
-        <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+        <mat-tree #tree [dataSource]="dataSource" [treeControl]="treeControl">
           <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle matTreeNodePadding style="padding-left:45px;">
             <!-- <button mat-icon-button></button> -->
-            <a style="cursor: pointer;" (click)="onMenuClick(node)">{{node.filename}}</a>
+            <a style="cursor: pointer;" (click)="onMenuClick(node)" [ngClass]="{'active' : activeUrl == node.filename}">{{node.filename}}</a>
           </mat-tree-node>
 
           <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding style="padding-left:30px;">
-            <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'toggle ' + node.filename">
-              <mat-icon class="mat-icon-rtl-mirror expansionIcons">
-                {{treeControl.isExpanded(node) ? 'remove' : 'add'}}
+            <button mat-button matTreeNodeToggle [disableRipple]="false" [attr.aria-label]="'toggle ' + node.filename">
+              {{node.filename}}
+              <mat-icon class="mat-icon-rtl-mirror">
+                {{treeControl.isExpanded(node) ? 'keyboard_arrow_up' : 'keyboard_arrow_down'}}
               </mat-icon>
             </button>
-            {{node.filename}}
+            
           </mat-tree-node>
         </mat-tree>
       </mat-nav-list>

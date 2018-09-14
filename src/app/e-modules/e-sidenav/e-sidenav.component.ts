@@ -4,7 +4,7 @@ import { MediaMatcher } from '@angular/cdk/layout';
 import { FlatTreeControl } from '@angular/cdk/tree';
 import { MatTreeFlatDataSource, MatTreeFlattener } from '@angular/material/tree';
 import { BehaviorSubject, Observable, of as observableOf } from 'rxjs';
-import { Router } from '@angular/router';
+import { Routes, RouterModule, Router, NavigationStart,NavigationEnd ,ActivatedRoute} from '@angular/router';
 import { MatSidenav } from '@angular/material';
 
 /**
@@ -28,7 +28,6 @@ export class FileFlatNode {
  */
 const TREE_DATA = JSON.stringify({
   BasicComponents: {
-
     'notification': 'notification',
     'map': 'map',
     'video': 'video',
@@ -49,28 +48,7 @@ const TREE_DATA = JSON.stringify({
     'tooltip': 'tooltip',
     'navigation': 'navigation',
     'autocomplete': 'autocomplete',
-    'accordian': 'accordian',
-
-    DateTimePickers: {
-      'datepicker': 'datepicker',
-      'timepicker': 'timepicker'
-    },
-    Menu: {
-      'menu': 'menu',
-      'tabs': 'tabs',
-      'spinner': 'spinner',
-      'progressbar': 'progressbar',
-      'switch': 'switch',
-      'toast': 'toast',
-      'sliders': 'sliders',
-      'carousel': 'carousel',
-      'breadcrumb': 'breadcrumb',
-      'messagebox': 'messagebox',
-    },
-    Dialog: {
-      'dialog': 'dialog',
-      'tooltip': 'tooltip'
-    }
+    'accordian': 'accordian'
   }
 });
 
@@ -141,21 +119,21 @@ export class ESideNavComponent implements OnInit, OnDestroy {
   navMode = 'side';
   showMenu = true;
   menuDataBackup: FileNode[] = JSON.parse(TREE_DATA);
-
+  @ViewChild('tree') tree;
   private _mobileQueryListener: () => void;
 
   treeControl: FlatTreeControl<FileFlatNode>;
   treeFlattener: MatTreeFlattener<FileNode, FileFlatNode>;
   dataSource: MatTreeFlatDataSource<FileNode, FileFlatNode>;
-
+  activeUrl:any;
   constructor(
     private database: FileDatabase,
     media: MediaMatcher,
     changeDetectorRef: ChangeDetectorRef,
-    private router: Router
+    private router: Router,
+    private _ActivatedRoute: ActivatedRoute
   ) {
-    this.treeFlattener = new MatTreeFlattener(this.transformer, this._getLevel,
-      this._isExpandable, this._getChildren);
+    this.treeFlattener = new MatTreeFlattener(this.transformer, this._getLevel, this._isExpandable, this._getChildren);
     this.treeControl = new FlatTreeControl<FileFlatNode>(this._getLevel, this._isExpandable);
     this.dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
 
@@ -164,12 +142,25 @@ export class ESideNavComponent implements OnInit, OnDestroy {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
+
+    this._ActivatedRoute.url.subscribe(() => {
+      console.log(this._ActivatedRoute.snapshot.children);
+      this.router.events.subscribe(event => {
+        if(event instanceof NavigationStart) {
+            this.activeUrl = event.url.replace('/', '');
+            console.log(this.activeUrl)
+        }
+      })
+    });
   }
   ngOnInit() {
     if (window.innerWidth < 768) {
       this.navMode = 'over';
       console.log(this.navMode)
     }
+  }
+  ngAfterViewInit() {
+    this.tree.treeControl.expandAll();
   }
   @HostListener('window:resize', ['$event'])
   onResize(event) {
@@ -234,3 +225,4 @@ export class ESideNavComponent implements OnInit, OnDestroy {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 }
+
