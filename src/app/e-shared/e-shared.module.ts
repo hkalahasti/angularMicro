@@ -29,6 +29,7 @@ import { DocsExampleModule } from '@ngx-docs/example'; // added
 
 import {EShareDataService} from './e-sharedata.service';
 import { ECustomIconService } from './e-custom-icon.service';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { FilterPipe, KeyValuesPipe, DecodeURIPipe, DatePipe, DateTimePipe, FlagPipe, CurrencyPipe } from './utils/pipes';
 
 import {
@@ -135,7 +136,8 @@ import {AgmCoreModule  } from '@agm/core';
     DocsExampleModule,
 
     // @ngx-prism
-    PrismModule
+    PrismModule,
+    FlexLayoutModule
   ],
   exports: [
     CommonModule,
@@ -196,7 +198,8 @@ import {AgmCoreModule  } from '@agm/core';
     CovalentMessageModule,
     AgmCoreModule,
     DocsExampleModule,
-    PrismModule
+    PrismModule,
+    FlexLayoutModule
   ],
   declarations: [FilterPipe, KeyValuesPipe, DecodeURIPipe, DatePipe, DateTimePipe, FlagPipe, CurrencyPipe],
   providers : [EShareDataService,ECustomIconService]

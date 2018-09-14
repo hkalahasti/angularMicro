@@ -6,9 +6,24 @@
         </mat-tab>
         <mat-tab label="Code">
             <mat-tab-group >
-                <mat-tab label="HTML" *ngIf="code.html"><ngx-prism [language]="'html'" [code]="code.html.content"></ngx-prism></mat-tab>
-                <mat-tab label="TS" *ngIf="code.ts" ><ngx-prism [language]="'javascript'" [code]="code.ts.content"></ngx-prism></mat-tab>
-                <mat-tab label="CSS" *ngIf="code.css" ><ngx-prism [language]="'css'" [code]="code.css.content"></ngx-prism></mat-tab>
+                <mat-tab label="HTML" *ngIf="code.html"> 
+                  <div class="bd-clipboard">
+                    <button (click)="copyToClipboard(code.html.content)" class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button>
+                  </div>
+                  <ngx-prism [language]="'html'" [code]="code.html.content"></ngx-prism>
+                </mat-tab>
+                <mat-tab label="TS" *ngIf="code.ts" >
+                    <div class="bd-clipboard">
+                        <button (click)="copyToClipboard(code.ts.content)" class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button>
+                      </div>
+                  <ngx-prism [language]="'javascript'" [code]="code.ts.content"></ngx-prism>
+                </mat-tab>
+                <mat-tab label="CSS" *ngIf="code.css" >
+                    <div class="bd-clipboard">
+                        <button (click)="copyToClipboard(code.css.content)" class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button>
+                      </div>
+                  <ngx-prism [language]="'css'" [code]="code.css.content"></ngx-prism>
+                </mat-tab>
             </mat-tab-group>
         </mat-tab> 
       </mat-tab-group>
