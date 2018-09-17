@@ -1,6 +1,6 @@
 <div class="row mar-top">
-  <div class="card col-md-10 padding0 mar-left">
-    <mat-tab-group>
+  <div class="card col-md-10 padding0 mar-left ">
+    <mat-tab-group class="top_header_tab">
       <mat-tab label="Demo">
         <div class="padding30">
           <router-outlet name="basic"></router-outlet>
@@ -29,10 +29,10 @@
           <mat-tab label="CSS" *ngIf="code.css">
             <div class="bd-clipboard">
               <button mat-icon-button (click)="copyToClipboard(code.css.content)" class="btn-clipboard" title="" data-original-title="Copy to clipboard">
-                <mat-icon class="md-24">file_copy</mat-icon>
+                <mat-icon class="md-24 copy_code">file_copy</mat-icon>
               </button>
             </div>
-            <ngx-prism [language]="'css'" [code]="code.css.content"></ngx-prism>
+            <ngx-prism [language]="'css'" [code]="code.css.content" class="code_view"></ngx-prism>
           </mat-tab>
         </mat-tab-group>
       </mat-tab>

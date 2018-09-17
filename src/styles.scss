@@ -65,9 +65,9 @@ body { $margin: 0; }
 }
 
 .btn-clipboard {
-    position: absolute;
-    top: 1.0rem;
-    right: 4.5rem;
+    position: absolute !important;
+    top: 0.5rem;
+    right: 1rem;
     z-index: 10;
     display: block;
     padding: .25rem .5rem;

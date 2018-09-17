@@ -337,6 +337,8 @@ html {
     background: #ffffff !important;
     background-color: #ffffff !important;
     border: none;
+    padding-left: 30px !important;
+    padding-bottom: 20px !important;
   }
   pre code > * {
     font-family: 'Open Sans', sans-serif !important;
@@ -353,7 +355,31 @@ html {
     background: #F5F5F5!important;
     display: block;
   }
-  
+
+  mat-tab-group.top_header_tab mat-tab-header{
+    // background: #808080 !important;
+    background:#056898 !important;
+  }
+  mat-tab-group.top_header_tab mat-tab-header .mat-tab-label, .mat-tab-link{
+    color: #fff;
+    opacity:1 !important;
+  }
+  // mat-tab-group.top_header_tab mat-tab-header .mat-tab-label.cdk-focused.cdk-mouse-focused{
+  //   border-bottom: 4px solid #fff !important;
+  // }
+  mat-tab-group.top_header_tab mat-tab-group mat-tab-header, mat-tab-group.top_header_tab mat-tab-group mat-tab-header .mat-tab-labels{
+    background: rgba(0, 0, 0, 0.03) !important;
+    
+  }
+  mat-tab-group.top_header_tab mat-tab-group mat-tab-header .mat-tab-label, .mat-tab-link{
+    color: #000 !important;
+  }
+  .copy_code{
+    position: absolute;
+    top: 0;
+    right:17px;
+  }
+ 
   
   @media (max-width: 768px) {
     .col-lg-2 {
