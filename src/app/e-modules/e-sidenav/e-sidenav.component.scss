@@ -46,6 +46,67 @@ h1.example-app-name {
     display: flex !important;
     overflow: hidden;
 }
+mat-sidenav-content{
+  overflow-x: hidden !important;
+}
 .active {
   color : rgb(0, 136, 209) !important;
+}
+.mat-list, .mat-nav-list, .mat-selection-list{
+  padding: 0px;
+}
+.navBtn{
+  opacity: 1;
+  mix-blend-mode: normal;
+  padding: 0px;
+  border-width: 0px;
+  border-radius: 100px;
+  border-color: rgb(102, 102, 102);
+  border-style: solid;
+  background-color: rgb(255, 255, 255);
+  background-image: none;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center center;
+  width: 145px;
+  height: 40px;
+  font-size: 14px;
+  color: black !important;
+  text-align: center;
+  cursor: pointer;
+  padding: 4px;
+}
+.parentNode {
+  opacity: 1;
+  mix-blend-mode: normal;
+  padding: 0px;
+  border-width: 0px 0px 1px;
+  border-radius: 0px;
+  border-color: rgb(223, 224, 232);
+  border-style: solid;
+  background-color: rgb(255, 255, 255);
+  background-image: none;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center center;
+  padding: 0px 20px;
+  cursor: pointer;
+}
+.childNode{
+  opacity: 1;
+    mix-blend-mode: normal;
+    padding: 0px;
+    border-width: 0px 0px 1px;
+    border-radius: 0px;
+    border-color: rgb(223, 224, 232);
+    border-style: solid;
+    background-color: rgb(245, 245, 245);
+    background-image: none;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center center;
+    
+}
+.example-spacer {
+  flex: 1 1 auto;
 }

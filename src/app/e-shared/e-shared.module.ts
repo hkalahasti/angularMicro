@@ -28,9 +28,13 @@ import { PrismModule } from '@ngx-prism/core';
 import { DocsExampleModule } from '@ngx-docs/example'; // added
 
 import {EShareDataService} from './e-sharedata.service';
+import {EAnimationService} from './e-animation.service';
 import { ECustomIconService } from './e-custom-icon.service';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FilterPipe, KeyValuesPipe, DecodeURIPipe, DatePipe, DateTimePipe, FlagPipe, CurrencyPipe } from './utils/pipes';
+import { IonRangeSliderModule } from "ng2-ion-range-slider";
+import { FullCalendarModule } from 'ng-fullcalendar';
+
 
 import {
   MatAutocompleteModule,
@@ -137,7 +141,9 @@ import {AgmCoreModule  } from '@agm/core';
 
     // @ngx-prism
     PrismModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    IonRangeSliderModule,
+    FullCalendarModule
   ],
   exports: [
     CommonModule,
@@ -199,17 +205,19 @@ import {AgmCoreModule  } from '@agm/core';
     AgmCoreModule,
     DocsExampleModule,
     PrismModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    IonRangeSliderModule,
+    FullCalendarModule
   ],
   declarations: [FilterPipe, KeyValuesPipe, DecodeURIPipe, DatePipe, DateTimePipe, FlagPipe, CurrencyPipe],
-  providers : [EShareDataService,ECustomIconService]
+  providers : [EShareDataService,ECustomIconService,EAnimationService]
 })
 export class ESharedModule { 
   static forRoot(): ModuleWithProviders {
     return {
         ngModule: ESharedModule,
         providers: [
-          EShareDataService,ECustomIconService
+          EShareDataService,ECustomIconService,EAnimationService
         ],
     };
 }

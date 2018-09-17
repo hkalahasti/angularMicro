@@ -1,4 +1,6 @@
-@import './scss/css/custom.css';
+@import './scss/css/custom.scss';
+@import './scss/css/reuse.scss';
+
 
 // @import '~prismjs/themes/prism-coy.css';
 // @import '~prismjs/themes/prism-dark.css';
@@ -17,6 +19,8 @@
 // (optional) Additional themes
 @import '~@covalent/markdown/markdown-theme';
 @import '~@covalent/highlight/highlight-theme';
+@import "~fullcalendar/dist/fullcalendar.css";
+
 
 // Define a custom typography config that overrides the font-family
 // or any typography level.
@@ -56,14 +60,14 @@ body { $margin: 0; }
 }
 
 .btn-clipboard:hover {
-    color: #fff;
-    background-color: #027de7;
+    color: black;
+   // background-color: #027de7;
 }
 
 .btn-clipboard {
     position: absolute;
-    top: 0.5rem;
-    right: 2.5rem;
+    top: 1.0rem;
+    right: 4.5rem;
     z-index: 10;
     display: block;
     padding: .25rem .5rem;

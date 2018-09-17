@@ -11,7 +11,7 @@ html {
   body {
     overflow-x: hidden;
   }
-  
+
   body.sticky-footer {
     margin-bottom: 72px;
   }
@@ -123,6 +123,10 @@ html {
     text-decoration: none;
     text-align: left;
   }
+  a {
+    text-decoration: none !important;
+  }
+  
   .card-body > nav > details .active {
     color: #F26222;
     font-weight: bold;
@@ -606,4 +610,6 @@ html {
   /* @media (min-width: 992px) {
    
   } */
+
+
   

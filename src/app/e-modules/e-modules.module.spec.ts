@@ -1,4 +1,4 @@
-import { EModuleModules } from './e-module.modules';
+import { EModuleModules } from './e-modules.module';
 
 describe('EModuleModule', () => {
   let eModuleModules: EModuleModules;

@@ -28,6 +28,10 @@ export class FileFlatNode {
  */
 const TREE_DATA = JSON.stringify({
   BasicComponents: {
+    'accordian': 'accordian',
+    'carousel': 'carousel',
+    'breadcrumb': 'breadcrumb',
+    'calender' : 'calender',
     'notification': 'notification',
     'map': 'map',
     'video': 'video',
@@ -41,14 +45,12 @@ const TREE_DATA = JSON.stringify({
     'switch': 'switch',
     'toast': 'toast',
     'sliders': 'sliders',
-    'carousel': 'carousel',
-    'breadcrumb': 'breadcrumb',
+    'dualslider': 'dualslider',
     'messagebox': 'messagebox',
     'dialog': 'dialog',
     'tooltip': 'tooltip',
     'navigation': 'navigation',
     'autocomplete': 'autocomplete',
-    'accordian': 'accordian'
   }
 });
 

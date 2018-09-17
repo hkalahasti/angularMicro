@@ -12,9 +12,9 @@ import {
   EMatDialogPopupComponent, EMatDialogComponent,
   EMatMenuComponent, EMatSliderComponent,
   EMatCarouselComponent, EMatBreadcrumbComponent,
-  EMatMessageboxComponent, EMatNavigationComponent,EMatAccordianComponent, EMatNotificationComponent,
+  EMatMessageboxComponent, EMatNavigationComponent,EMatAutocompleteComponent,EMatAccordianComponent, EMatNotificationComponent,
   EMatMapComponent,
-  EMatVideoComponent,EMatDropdownComponent
+  EMatVideoComponent,EMatDropdownComponent, ECalenderComponent,EDualRangeSliderComponent
 } from './angular-components/basic-components/index';
 
 
@@ -157,6 +157,27 @@ const routes: Routes = [
     path: 'accordian', component: ELayoutComponent, children: [
       {
         path: '', component: EMatAccordianComponent, outlet: 'basic', data: { name: 'Basic Mat Accordian' }
+      }
+    ]
+  },
+  {
+    path: 'calender', component: ELayoutComponent, children: [
+      {
+        path: '', component: ECalenderComponent, outlet: 'basic', data: { name: 'Basic Calender' }
+      }
+    ]
+  },
+  {
+    path: 'autocomplete', component: ELayoutComponent, children: [
+      {
+        path: '', component:EMatAutocompleteComponent , outlet: 'basic', data: { name: 'Basic autocomplete' }
+      }
+    ]
+  },
+  {
+    path: 'dualslider', component: ELayoutComponent, children: [
+      {
+        path: '', component:EDualRangeSliderComponent , outlet: 'basic', data: { name: 'Basic Calender' }
       }
     ]
   },

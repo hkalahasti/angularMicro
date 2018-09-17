@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { memoize } from 'lodash-decorators';
 import { FormArray, FormGroup, FormBuilder } from '@angular/forms';
-import {EShareDataService} from '../../e-shared/e-sharedata.service'
+import {EShareDataService} from '../../e-shared/e-sharedata.service';
 import {Code} from './code'
 @Component({
   selector: 'e-layout',

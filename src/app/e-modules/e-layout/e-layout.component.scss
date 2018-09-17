@@ -35,3 +35,7 @@
 ngx-prism  pre{
   height: 300px !important;
 }
+mat-tab-group ::ng-deep   mat-tab-header  .mat-tab-label-container  .mat-tab-list  .mat-tab-labels{
+  color: rgba(0,0,0,.54) !important;
+  background: rgba(0,0,0,.03) !important;
+}
