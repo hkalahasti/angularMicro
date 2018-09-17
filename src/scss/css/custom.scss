@@ -379,6 +379,16 @@ html {
     top: 0;
     right:17px;
   }
+  ::-webkit-scrollbar{
+    width: 6px;
+  }
+//   ::-webkit-scrollbar-track {
+//     background: #056898; 
+// }
+::-webkit-scrollbar-thumb {
+  background: #039be5; 
+}
+  
  
   
   @media (max-width: 768px) {
