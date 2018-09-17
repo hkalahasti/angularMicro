@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { memoize } from 'lodash-decorators';
+import { Subscription } from 'rxjs/Subscription';
 import { FormArray, FormGroup, FormBuilder } from '@angular/forms';
 import {EShareDataService} from '../../e-shared/e-sharedata.service';
 import {Code} from './code'
@@ -12,20 +13,27 @@ import {Code} from './code'
 export class ELayoutComponent implements OnInit {
 
   componentName: string = "";
+  code_subscription: Subscription;
   code :any;
   constructor(
     private _ActivatedRoute: ActivatedRoute,public fb: FormBuilder,private eShareDataService:EShareDataService
-  ) { }
-
-  ngOnInit() {
+  ) { 
+    this.code_subscription = this.eShareDataService.getCode().subscribe(
+      code => { 
+        this.code = code; 
+        this.eShareDataService.set('code', this.code);
+      });
     this._ActivatedRoute.url.subscribe(() => {
       console.log(this._ActivatedRoute.snapshot.children);
     });
-    if(this.eShareDataService.get('code')){
-      this.code = this.eShareDataService.get('code');
-    }else{
-      this.code = Code;
-    }
+  }
+
+  ngOnInit() {
+      if(this.eShareDataService.get('code')){
+        this.code = this.eShareDataService.get('code');
+      }else{
+        this.code = Code;
+      }
   }
 
 
