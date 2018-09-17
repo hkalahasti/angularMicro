@@ -12,7 +12,7 @@ export class EMatAccordianComponent implements OnInit {
   panelOpenState = false;
   ngOnInit() {
     this.code = Code;
-    this.eShareDataService.set('code', this.code);
+    this.eShareDataService.pushCode(this.code);
     console.log(this.code)
   }
 
