@@ -20,3 +20,5 @@ export { EMatMapComponent } from './e-mat-map/e-mat-map.component';
 export { EMatVideoComponent } from './e-mat-video/e-mat-video.component';
 export { EMatDropdownComponent } from './e-mat-dropdown/e-mat-dropdown.component';
 export { EMatAutocompleteComponent } from './e-mat-autocomplete/e-mat-autocomplete.component';
+export { ECalenderComponent } from './e-calender/e-calender.component';
+export { EDualRangeSliderComponent } from './e-dual-range-slider/e-dual-range-slider.component';

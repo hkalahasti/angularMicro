@@ -1,7 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { EMatSharedModule } from '../../e-shared/e-shared-mat.module';
+import { ESharedModule } from '../../e-shared/e-shared.module';
 import {
   EMatDatePickerComponent, EMatTimepickerComponent,
   EMatSpinnerComponent, EMatTabsComponent,
@@ -13,8 +13,13 @@ import {
   EMatMessageboxComponent, EMatNavigationComponent,
   ELayoutComponent,EMatAccordianComponent, EMatNotificationComponent,
   EMatMapComponent,
-  EMatVideoComponent,EMatDropdownComponent,EMatAutocompleteComponent
+  EMatVideoComponent,EMatDropdownComponent,EMatAutocompleteComponent,ECalenderComponent,EDualRangeSliderComponent
 } from './index';
+
+
+import {EventSesrvice} from './e-calender/events.service'
+
+
 
 
 
@@ -24,10 +29,11 @@ import {
 
 @NgModule({
   imports: [
-    EMatSharedModule,
+    ESharedModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [],
+  providers : [EventSesrvice],
   declarations:
   [ EMatDatePickerComponent, EMatDialogComponent,
     EMatMenuComponent, EMatDialogPopupComponent,
@@ -43,7 +49,9 @@ import {
     EMatMapComponent,
     EMatVideoComponent,
     EMatDropdownComponent,
-    EMatAutocompleteComponent ],
+    EMatAutocompleteComponent,
+    ECalenderComponent,
+    EDualRangeSliderComponent ],
     entryComponents: [EMatDialogComponent, EMatDialogPopupComponent],
 
 })

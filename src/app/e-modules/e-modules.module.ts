@@ -2,7 +2,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { EMatSharedModule } from '../e-shared/index';
+import { ESharedModule } from '../e-shared/index';
 import { ESideNavComponent } from './e-sidenav/e-sidenav.component';
 import { EToolbarComponent } from './e-toolbar/e-toolbar.component';
 import { EDashboardComponent } from './e-dashboard/e-dashboard.component';
@@ -16,7 +16,7 @@ const options: HighlightOptions = {
  };
 @NgModule({
   imports: [
-    EMatSharedModule,
+    ESharedModule,
     BrowserAnimationsModule,
     HighlightModule.forRoot({theme: 'default'}),
     DocsExampleModule,

@@ -1,0 +1,7 @@
+<div class="profile_data">
+  <div class="form-group range_slider form_range_slider">
+    <ion-range-slider #sliderElement type="double" min="0" max="1000" prefix="{{currencySymbol}} " [from]="from" [to]="to" from_shadow="true"
+      to_shadow="true" decorate_both="false" (onFinish)="myOnFinish($event)">
+    </ion-range-slider>
+  </div>
+</div>

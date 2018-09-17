@@ -8,7 +8,6 @@ import { LayoutModule } from '@angular/cdk/layout';
 
 import { EModuleModules } from './e-modules/index';
 import { appRoutes } from './app.routing';
-import { ECustomIconService } from './e-shared/index';
 import { EMatComponentsModule } from './angular-components/basic-components/e-mat-components.module';
 import { ETranslationModule } from './e-translation/e-translation.module';
 
@@ -28,7 +27,6 @@ import { NguiAutoCompleteModule } from '@ngui/auto-complete';
     NguiAutoCompleteModule
   ],
   providers: [
-    ECustomIconService
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   bootstrap: [AppComponent]

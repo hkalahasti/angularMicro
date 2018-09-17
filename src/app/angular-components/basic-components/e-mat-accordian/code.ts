@@ -1,3 +1,6 @@
+export const Code = {
+    html: {
+        content: `
 <mat-accordion>
   <mat-expansion-panel>
     <mat-expansion-panel-header>
@@ -17,6 +20,7 @@
       <input matInput placeholder="Age">
     </mat-form-field>
   </mat-expansion-panel>
+  
   <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
     <mat-expansion-panel-header>
       <mat-panel-title>
@@ -29,3 +33,29 @@
     <p>I'm visible because I am open</p>
   </mat-expansion-panel>
 </mat-accordion>
+`,
+        language: 'html'
+    },
+    ts: {
+        content: `import {Component} from '@angular/core';
+
+        /**
+         * @title Basic expansion panel
+         */
+        @Component({
+          selector: 'expansion-overview-example',
+          templateUrl: 'expansion-overview-example.html',
+          styleUrls: ['expansion-overview-example.css'],
+        })
+        export class ExpansionOverviewExample {
+          panelOpenState = false;
+        }
+        `,
+        language: 'javascript'
+    },
+    css: {
+        content: `/** No CSS for this example */
+        `,
+        language: 'css'
+    }
+}
