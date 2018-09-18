@@ -1,9 +1,14 @@
+
 <div class="row mar-top">
   <div class="card col-md-10 padding0 mar-left ">
+      <div fxLayout="row wrap" fxLayoutAlign="start start" style="margin:8px">
+          <h2>{{componentName}}</h2>
+      </div>
     <mat-tab-group class="top_header_tab">
       <mat-tab label="Demo">
         <div class="padding30">
           <router-outlet name="basic"></router-outlet>
+
         </div>
       </mat-tab>
       <mat-tab label="Code">
