@@ -425,10 +425,19 @@ html {
   }
   .side_nav{
     border-right: 1px solid rgb(198, 208, 218);
-    width: 230px;
+    width: 270px;
     transform: none;
     visibility: visible;
     box-shadow: 2px 0px 12px #b9b7b7;
+  }
+  .icon_fet{
+    margin-right:5px;
+  }
+  .icon_fet svg{
+    color: #fc7d2a;
+  }
+  .dashboard_card{
+    border-radius: 10px !important;
   }
   ::-webkit-scrollbar{
     width: 6px;
