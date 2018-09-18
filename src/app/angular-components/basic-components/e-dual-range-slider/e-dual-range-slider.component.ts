@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Code } from './code';
+import { EShareDataService } from '../../../e-shared/e-sharedata.service'
+
 @Component({
   selector: 'app-e-dual-range-slider',
   templateUrl: './e-dual-range-slider.component.html',
@@ -9,11 +12,18 @@ export class EDualRangeSliderComponent implements OnInit {
   currencySymbol:any = "$";
   from:any;
   to:any;
-  constructor() { }
-
+  
+  code: any;
+  
+  constructor(private eShareDataService: EShareDataService) { }
+  
   ngOnInit() {
+    this.code = Code;
+    this.eShareDataService.pushCode(this.code);
+    console.log(this.code)
   }
-    myOnFinish(event) {
+  
+  myOnFinish(event) {
     this.from = event.from;
     this.to = event.to;
   }

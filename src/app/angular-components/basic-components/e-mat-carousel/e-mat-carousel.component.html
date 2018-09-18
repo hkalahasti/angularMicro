@@ -2,9 +2,9 @@
       <div ngxSlickItem *ngFor="let slide of slides" class="slide">
             <img src="{{ slide.img }}" alt="" width="100%">
       </div>
-  </ngx-slick>
+</ngx-slick>
 
-  <button mat-button (click)="addSlide()">Add</button>
-  <button mat-button (click)="removeSlide()">Remove</button>
-  <button mat-button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
-  <button mat-button (click)="slickModal.unslick()">unslick</button>
+<button mat-button (click)="addSlide()">Add</button>
+<button mat-button (click)="removeSlide()">Remove</button>
+<button mat-button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
+<button mat-button (click)="slickModal.unslick()">unslick</button>
