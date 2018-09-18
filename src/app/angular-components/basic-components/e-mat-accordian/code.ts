@@ -20,7 +20,7 @@ html: {
         <input matInput placeholder="Age">
       </mat-form-field>
     </mat-expansion-panel>
-    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    <mat-expansion-panel  [expanded]="true" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
       <mat-expansion-panel-header>
         <mat-panel-title>
           Self aware panel
