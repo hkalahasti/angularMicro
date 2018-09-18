@@ -358,21 +358,50 @@ html {
 
   mat-tab-group.top_header_tab mat-tab-header{
     // background: #808080 !important;
-    background:#056898 !important;
+    background:#fff !important;
   }
   mat-tab-group.top_header_tab mat-tab-header .mat-tab-label, .mat-tab-link{
-    color: #fff;
+    color: #000;
+    opacity:1 !important;
+    background: #fff !important;
+    font-weight: 600;
+  }
+  mat-tab-group.top_header_tab mat-tab-header .mat-tab-label-container .mat-tab-list .mat-tab-labels{
+    background: #fff !important;
     opacity:1 !important;
   }
   // mat-tab-group.top_header_tab mat-tab-header .mat-tab-label.cdk-focused.cdk-mouse-focused{
   //   border-bottom: 4px solid #fff !important;
   // }
-  mat-tab-group.top_header_tab mat-tab-group mat-tab-header, mat-tab-group.top_header_tab mat-tab-group mat-tab-header .mat-tab-labels{
-    background: rgba(0, 0, 0, 0.03) !important;
-    
+  // mat-tab-group mat-tab-group mat-tab-header, mat-tab-group.top_header_tab mat-tab-group mat-tab-header .mat-tab-labels{
+  //   background: rgba(0, 0, 0, 0.03) !important;
+  // }
+  .mat-tab-body.mat-tab-body-active{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-bottom: 15px;
+  }
+  .code_box_main{
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+  .top_header_tab mat-tab-header{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
   mat-tab-group.top_header_tab mat-tab-group mat-tab-header .mat-tab-label, .mat-tab-link{
     color: #000 !important;
+    font-weight: normal !important;
+  }
+  mat-tab-group.top_header_tab mat-tab-group mat-tab-header .mat-tab-label{
+    background: #f7f7f7 !important;
+    border-radius: 0 !important;
+  }
+  mat-tab-group.top_header_tab mat-tab-group mat-tab-header .mat-tab-label-container .mat-tab-list .mat-tab-labels{
+    background: #f7f7f7 !important;
+  }
+  .top_header_tab mat-tab mat-tab-labels{
+    background: #ccc !important;
   }
   .copy_code{
     position: absolute;
@@ -381,10 +410,11 @@ html {
   }
   ::-webkit-scrollbar{
     width: 6px;
+    height:100px;
   }
-//   ::-webkit-scrollbar-track {
-//     background: #056898; 
-// }
+  ::-webkit-scrollbar-track {
+    background: #ccc; 
+}
 ::-webkit-scrollbar-thumb {
   background: #039be5; 
 }
