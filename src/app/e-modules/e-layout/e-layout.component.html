@@ -1,9 +1,17 @@
+
 <div class="row mar-top">
-  <div class="card col-md-10 p-l-0 p-r-0 mar-left code_box_main">
+    <div class="col-md-10 padding0 mar-left">
+        <div fxLayout="row wrap" fxLayoutAlign="start start" style="margin:8px">
+            <h2>{{componentName}}</h2>
+        </div>
+    </div>
+  <div class="card col-md-10 padding0 mar-left main_box">
+      
     <mat-tab-group class="top_header_tab">
       <mat-tab label="Demo">
         <div class="padding30">
           <router-outlet name="basic"></router-outlet>
+
         </div>
       </mat-tab>
       <mat-tab label="Code">
@@ -11,7 +19,7 @@
           <mat-tab label="HTML" *ngIf="code.html">
             <div class="bd-clipboard">
               <button mat-icon-button (click)="copyToClipboard(code.html.content)" class="btn-clipboard" title="" data-original-title="Copy to clipboard">
-                <mat-icon class="md-24">file_copy</mat-icon>
+                <mat-icon class="md-24 copy_code">file_copy</mat-icon>
               </button>
             </div>
             <ngx-prism  [language]="'html'" [code]="code.html.content"></ngx-prism>
@@ -20,7 +28,7 @@
             <div>
             <div class="bd-clipboard">
               <button mat-icon-button (click)="copyToClipboard(code.ts.content)" class="btn-clipboard" title="" data-original-title="Copy to clipboard">
-                <mat-icon class="md-24">file_copy</mat-icon>
+                <mat-icon class="md-24 copy_code">file_copy</mat-icon>
               </button>
             </div>
           </div>

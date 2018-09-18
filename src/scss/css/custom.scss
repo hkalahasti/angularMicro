@@ -379,7 +379,7 @@ html {
   .mat-tab-body.mat-tab-body-active{
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
   }
   .code_box_main{
     border-radius: 10px;
@@ -400,6 +400,9 @@ html {
   mat-tab-group.top_header_tab mat-tab-group mat-tab-header .mat-tab-label-container .mat-tab-list .mat-tab-labels{
     background: #f7f7f7 !important;
   }
+  mat-tab-group.top_header_tab mat-tab-group mat-tab-header{
+    border-radius: 0 !important;
+  }
   .top_header_tab mat-tab mat-tab-labels{
     background: #ccc !important;
   }
@@ -407,6 +410,10 @@ html {
     position: absolute;
     top: 0;
     right:17px;
+    font-size: 24px;
+  }
+  .main_box{
+    box-shadow: 1px 5px 5px #d6d6d6;
   }
   ::-webkit-scrollbar{
     width: 6px;

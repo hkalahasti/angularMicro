@@ -13,6 +13,7 @@ import {Code} from './code'
 export class ELayoutComponent implements OnInit {
 
   componentName: string = "";
+  componentType : String = "";
   code_subscription: Subscription;
   code :any;
   constructor(
@@ -24,7 +25,10 @@ export class ELayoutComponent implements OnInit {
         this.eShareDataService.set('code', this.code);
       });
     this._ActivatedRoute.url.subscribe(() => {
-      console.log(this._ActivatedRoute.snapshot.children);
+      console.log(this._ActivatedRoute.snapshot.children[0].data.name);
+      //console.log(this._ActivatedRoute.snapshot.data['name'])
+      this.componentName = this._ActivatedRoute.snapshot.children[0].data.name;
+      this.componentType = this._ActivatedRoute.snapshot.children[0].data.type;
     });
   }
 
