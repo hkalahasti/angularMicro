@@ -379,7 +379,7 @@ html {
   .mat-tab-body.mat-tab-body-active{
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
   .code_box_main{
     border-radius: 10px;
@@ -406,6 +406,10 @@ html {
   .top_header_tab mat-tab mat-tab-labels{
     background: #ccc !important;
   }
+  .dashoard_list h6{
+    margin: 0;
+    line-height: 2;
+  }
   .copy_code{
     position: absolute;
     top: 0;
@@ -414,13 +418,24 @@ html {
   }
   .main_box{
     box-shadow: 1px 5px 5px #d6d6d6;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .side_nav{
+    border-right: 1px solid rgb(198, 208, 218);
+    width: 230px;
+    transform: none;
+    visibility: visible;
+    box-shadow: 2px 0px 12px #b9b7b7;
   }
   ::-webkit-scrollbar{
     width: 6px;
     height:100px;
   }
   ::-webkit-scrollbar-track {
-    background: #ccc; 
+    background: #f7f7f7; 
 }
 ::-webkit-scrollbar-thumb {
   background: #039be5; 

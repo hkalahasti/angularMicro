@@ -1,6 +1,6 @@
 <div fxLayout="row wrap" fxLayoutAlign="start start" style="margin:8px">
     <mat-card style="margin:8px" class="pointer"  fxFlex="100" fxFlex.xs="100" fxFlex.sm="20" fxFlex.md="20"  fxFlex.lg="17" fxFlex.xl="25"  fxLayoutAlign="center center" *ngFor="let item of list" (click)="openComponent(item)">
-        <div>
+        <div class="dashoard_list">
           <h6 style="color:#5e42b0; text-transform: capitalize">{{item.name}}</h6>
         </div>
     </mat-card>
