@@ -10,7 +10,7 @@ import { EModuleModules } from './e-modules/index';
 import { appRoutes } from './app.routing';
 import { EMatComponentsModule } from './angular-components/basic-components/e-mat-components.module';
 import { ETranslationModule } from './e-translation/e-translation.module';
-import {MyNavComponent} from './my-nav/my-nav.component'
+import {MyNavComponent} from './my-nav/my-nav.component';
 
 import { NguiAutoCompleteModule } from '@ngui/auto-complete';
 @NgModule({

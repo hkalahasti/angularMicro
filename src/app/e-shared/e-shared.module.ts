@@ -36,6 +36,8 @@ import { IonRangeSliderModule } from "ng2-ion-range-slider";
 import { FullCalendarModule } from 'ng-fullcalendar';
 
 
+
+
 import {
   MatAutocompleteModule,
   MatBadgeModule,
