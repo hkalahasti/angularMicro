@@ -488,11 +488,13 @@ html {
 }
 mat-card.pointer.dashboard_card.mat-card.ng-tns-c10-1.ng-star-inserted:hover {
   background:#fd9450;
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
   display: inline-block;
   vertical-align: middle;
   transition-duration: 0.3s;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
 }
 mat-card.pointer.dashboard_card.mat-card.ng-tns-c10-1.ng-star-inserted:hover .dashboard_icon_fet svg,
 mat-card.pointer.dashboard_card.mat-card.ng-tns-c10-1.ng-star-inserted:hover .dashoard_list h6{
