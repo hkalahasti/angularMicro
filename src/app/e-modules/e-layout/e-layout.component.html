@@ -15,6 +15,7 @@
         </div>
       </mat-tab>
       <mat-tab label="Code">
+        
         <mat-tab-group>
           <mat-tab label="HTML" *ngIf="code.html">
             <div class="bd-clipboard">
@@ -22,7 +23,10 @@
                 <mat-icon class="md-24 copy_code">file_copy</mat-icon>
               </button>
             </div>
+
+          <ng-scrollbar>
             <ngx-prism  [language]="'html'" [code]="code.html.content"></ngx-prism>
+          </ng-scrollbar>
           </mat-tab>
           <mat-tab label="TypeScript" *ngIf="code.ts">
             <div>

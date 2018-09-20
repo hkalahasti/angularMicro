@@ -24,6 +24,7 @@
 
 
 <mat-sidenav-container class="example-sidenav-container">
+  
   <mat-sidenav #sidenav [mode]="navMode" opened="true" class="side_nav">
     <mat-nav-list>
       <!-- <form class="searchform">
@@ -33,6 +34,7 @@
           </mat-form-field>
         </form> -->
       <mat-tree #tree [dataSource]="dataSource" [treeControl]="treeControl">
+        
         <mat-tree-node class="childNode side_nav_list" *matTreeNodeDef="let node" matTreeNodeToggle matTreeNodePadding style="padding-left:30px;" (click)="onMenuClick(node)">
           <!-- <button mat-icon-button></button> -->
           <a style="cursor: pointer;"  class="text-captilize"  [ngClass]="{'active' : activeUrl == node.filename}">{{node.filename}}</a>
@@ -54,9 +56,12 @@
         </mat-tree-node>
       </mat-tree>
     </mat-nav-list>
+
   </mat-sidenav>
 
   <mat-sidenav-content>
+      
     <router-outlet></router-outlet>
+   
   </mat-sidenav-content>
 </mat-sidenav-container>

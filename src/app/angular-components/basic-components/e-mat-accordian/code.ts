@@ -25,9 +25,11 @@ html: {
         <mat-panel-title>
           Self aware panel
         </mat-panel-title>
+        
         <mat-panel-description>
           Currently I am {{panelOpenState ? 'open' : 'closed'}}
         </mat-panel-description>
+        
       </mat-expansion-panel-header>
       <p>I'm visible because I am open</p>
     </mat-expansion-panel>

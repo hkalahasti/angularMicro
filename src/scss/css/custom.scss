@@ -337,8 +337,8 @@ html {
     background: #ffffff !important;
     background-color: #ffffff !important;
     border: none;
-    padding-left: 30px !important;
-    padding-bottom: 20px !important;
+    padding-left: 20px !important;
+    // padding-bottom: 20px !important;
   }
   pre code > * {
     font-family: 'Open Sans', sans-serif !important;
@@ -380,6 +380,9 @@ html {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     padding-bottom: 10px;
+  }
+  mat-tab-body mat-tab-body.mat-tab-body.mat-tab-body-active .mat-tab-body-content {
+    padding-top: 15px;
   }
   .code_box_main{
     border-radius: 10px;
@@ -476,6 +479,12 @@ html {
 }
 ::-webkit-scrollbar-thumb {
   background: #09254e; 
+}
+.ng-scrollbar-thumb{
+  background-color: rgb(9, 37, 78) !important;
+}
+.ng-scrollbar{
+  right:0 !important;
 }
 .dashboard_icon_fet.mat-icon{
   font-size: 4rem;
