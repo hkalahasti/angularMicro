@@ -2,23 +2,23 @@
 export class Storage {
 
     static pid: string = 'DLTECH';
-    static setLocalItem(key:string, val: any){
-        key = this.pid+'-'+key;
-        if(val) {
-            if(typeof val === 'object'){
+    static setLocalItem(key: string, val: any) {
+        key = this.pid + '-' + key;
+        if (val) {
+            if (typeof val === 'object') {
                 val = JSON.stringify(val);
             }
             localStorage.setItem(key, val);
         }
 
     }
-    static getLocalItem(key:string){
-         key = this.pid+'-'+key;
-        let val:string = localStorage.getItem(key);
-        if(val) {
-            if(val.indexOf("{") > -1) {
+    static getLocalItem(key: string) {
+        key = this.pid + '-' + key;
+        let val: string = localStorage.getItem(key);
+        if (val) {
+            if (val.indexOf("{") > -1) {
                 val = JSON.parse(val);
-            } else if(val.indexOf("[") > -1) {
+            } else if (val.indexOf("[") > -1) {
                 val = JSON.parse(val);
             }
             return val;
@@ -26,38 +26,34 @@ export class Storage {
             return null;
         }
     }
-    static  removeLocalItem(key: string) {
-         key = this.pid+'-'+key;
+    static removeLocalItem(key: string) {
+        key = this.pid + '-' + key;
         localStorage.removeItem(key);
     }
-    static setSessionItem(key:string, val: any){
-         key = this.pid+'-'+key;
+    static setSessionItem(key: string, val: any) {
+        key = this.pid + '-' + key;
 
-        if(val) {
-             console.log(key);
-            console.log(val);
-            console.log(Array.isArray(val));
-            if(typeof val === 'object'){
+        if (val) {
+            if (typeof val === 'object') {
                 val = JSON.stringify(val);
-            } else if(Array.isArray(val)){
-                console.log(val);
-                val = JSON.stringify(val);   
-                 console.log(val);    
+            } else if (Array.isArray(val)) {
+
+                val = JSON.stringify(val);
+
             }
 
             sessionStorage.setItem(key, val);
-            console.log(sessionStorage.getItem(key));
         }
 
     }
 
-    static getSessionItem(key:string): any {
-         key = this.pid+'-'+key;
-        let val:string = window.sessionStorage.getItem(key);
-        if(val) {
-            if(val.indexOf("{") > -1) {
+    static getSessionItem(key: string): any {
+        key = this.pid + '-' + key;
+        let val: string = window.sessionStorage.getItem(key);
+        if (val) {
+            if (val.indexOf("{") > -1) {
                 val = JSON.parse(val);
-            } else if(val.indexOf("[") > -1) {
+            } else if (val.indexOf("[") > -1) {
                 val = JSON.parse(val);
             }
             return val;
@@ -65,34 +61,34 @@ export class Storage {
             return null;
         }
     }
-    static  removeSessionItem(key: string) {
-        key = this.pid+'-'+key;
+    static removeSessionItem(key: string) {
+        key = this.pid + '-' + key;
         sessionStorage.removeItem(key);
     }
-    static sessionClear(){
+    static sessionClear() {
         sessionStorage.clear();
     }
 
 
-    static setJWT(val : string){
-        if(val){
-           sessionStorage.setItem(this.pid+'-jwt', val);
+    static setJWT(val: string) {
+        if (val) {
+            sessionStorage.setItem(this.pid + '-jwt', val);
         }
     }
-    static getJWT(){
-        return sessionStorage.getItem(this.pid+'-jwt');
+    static getJWT() {
+        return sessionStorage.getItem(this.pid + '-jwt');
     }
-    static setSessionUser(val : string){
-        if(val){
-           this.setSessionItem('user', val);
+    static setSessionUser(val: string) {
+        if (val) {
+            this.setSessionItem('user', val);
         }
     }
     static getSessionUser(): any {
         return this.getSessionItem('user');
     }
-    static setMenuList(val : string){
-        if(val){
-           this.setSessionItem('menu', val);
+    static setMenuList(val: string) {
+        if (val) {
+            this.setSessionItem('menu', val);
         }
     }
     static getMenuList(): any {
@@ -100,13 +96,13 @@ export class Storage {
         return this.getSessionItem('menu');
     }
 
-    static getBranch(): string{
+    static getBranch(): string {
         return this.getSessionItem('branch');
     }
 
-    static setBranch(val : string){
-        if(val){
-           this.setSessionItem('branch', val);
+    static setBranch(val: string) {
+        if (val) {
+            this.setSessionItem('branch', val);
         }
     }
 

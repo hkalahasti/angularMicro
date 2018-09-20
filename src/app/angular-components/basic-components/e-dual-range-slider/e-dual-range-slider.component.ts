@@ -10,8 +10,8 @@ import { EShareDataService } from '../../../e-shared/e-sharedata.service'
 })
 export class EDualRangeSliderComponent implements OnInit {
   currencySymbol:any = "$";
-  from:any;
-  to:any;
+  from:any = 0;
+  to:any = 1000;
   
   code: any;
   

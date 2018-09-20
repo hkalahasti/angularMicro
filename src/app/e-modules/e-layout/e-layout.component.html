@@ -34,6 +34,16 @@
           </div>
             <ngx-prism [language]="'javascript'" [code]="code.ts.content"></ngx-prism>
           </mat-tab>
+          <mat-tab label="Service" *ngIf="code.service">
+              <div>
+              <div class="bd-clipboard">
+                <button mat-icon-button (click)="copyToClipboard(code.service.content)" class="btn-clipboard" title="" data-original-title="Copy to clipboard">
+                  <mat-icon class="md-24 copy_code">file_copy</mat-icon>
+                </button>
+              </div>
+            </div>
+              <ngx-prism [language]="'javascript'" [code]="code.service.content"></ngx-prism>
+          </mat-tab>
           <mat-tab label="CSS" *ngIf="code.css">
             <div class="bd-clipboard">
               <button mat-icon-button (click)="copyToClipboard(code.css.content)" class="btn-clipboard" title="" data-original-title="Copy to clipboard">

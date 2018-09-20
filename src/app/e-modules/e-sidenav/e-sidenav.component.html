@@ -35,7 +35,7 @@
       <mat-tree #tree [dataSource]="dataSource" [treeControl]="treeControl">
         <mat-tree-node class="childNode side_nav_list" *matTreeNodeDef="let node" matTreeNodeToggle matTreeNodePadding style="padding-left:30px;" (click)="onMenuClick(node)">
           <!-- <button mat-icon-button></button> -->
-          <a style="cursor: pointer;"  [ngClass]="{'active' : activeUrl == node.filename}">{{node.filename}}</a>
+          <a style="cursor: pointer;"  class="text-captilize"  [ngClass]="{'active' : activeUrl == node.filename}">{{node.filename}}</a>
         </mat-tree-node>
 
         <mat-tree-node class="parentNode " *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding style="padding-left:30px;"
@@ -44,7 +44,7 @@
                     class="md-18 icon_fet" 
                     md-list-icon svgIcon="core:{{node.filename}}">
           </mat-icon>
-          <a [attr.aria-label]="'toggle ' + node.filename" >
+          <a [attr.aria-label]="'toggle ' + node.filename" class="text-captilize">
             {{node.filename}}
           </a>
           <mat-icon class="mat-icon-rtl-mirror" style="right: 15px;position: absolute;">
