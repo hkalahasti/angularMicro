@@ -3,8 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { memoize } from 'lodash-decorators';
 import { Subscription } from 'rxjs/Subscription';
 import { FormArray, FormGroup, FormBuilder } from '@angular/forms';
-import {EShareDataService} from '../../e-shared/e-sharedata.service';
-import {Code} from './code'
+import { EShareDataService } from '../../e-shared/e-sharedata.service';
+import { Code } from './code'
 @Component({
   selector: 'e-layout',
   templateUrl: './e-layout.component.html',
@@ -13,15 +13,15 @@ import {Code} from './code'
 export class ELayoutComponent implements OnInit {
 
   componentName: string = "";
-  componentType : String = "";
+  componentType: String = "";
   code_subscription: Subscription;
-  code :any;
+  code: any;
   constructor(
-    private _ActivatedRoute: ActivatedRoute,public fb: FormBuilder,private eShareDataService:EShareDataService
-  ) { 
+    private _ActivatedRoute: ActivatedRoute, public fb: FormBuilder, private eShareDataService: EShareDataService
+  ) {
     this.code_subscription = this.eShareDataService.getCode().subscribe(
-      code => { 
-        this.code = code; 
+      code => {
+        this.code = code;
         this.eShareDataService.set('code', this.code);
       });
     this._ActivatedRoute.url.subscribe(() => {
@@ -33,11 +33,11 @@ export class ELayoutComponent implements OnInit {
   }
 
   ngOnInit() {
-      if(this.eShareDataService.get('code')){
-        this.code = this.eShareDataService.get('code');
-      }else{
-        this.code = Code;
-      }
+    if (this.eShareDataService.get('code')) {
+      this.code = this.eShareDataService.get('code');
+    } else {
+      this.code = Code;
+    }
   }
 
 

@@ -1,12 +1,11 @@
-
 <div class="row mar-top">
-    <div class="col-md-11 padding0 mar-left">
-        <div fxLayout="row wrap" fxLayoutAlign="start start" style="margin:8px">
-            <h2>{{componentName}}</h2>
-        </div>
+  <div class="col-md-11 padding0 mar-left">
+    <div fxLayout="row wrap" fxLayoutAlign="start start" style="margin:8px">
+      <h2>{{componentName}}</h2>
     </div>
+  </div>
   <div class="card col-md-11 padding0 mar-left main_box">
-      
+
     <mat-tab-group class="top_header_tab">
       <mat-tab label="Demo">
         <div class="padding30">
@@ -15,7 +14,7 @@
         </div>
       </mat-tab>
       <mat-tab label="Code">
-        
+
         <mat-tab-group>
           <mat-tab label="HTML" *ngIf="code.html">
             <div class="bd-clipboard">
@@ -23,30 +22,27 @@
                 <mat-icon class="md-24 copy_code">file_copy</mat-icon>
               </button>
             </div>
-
-          <ng-scrollbar>
-            <ngx-prism  [language]="'html'" [code]="code.html.content"></ngx-prism>
-          </ng-scrollbar>
+            <ngx-prism [language]="'html'" [code]="code.html.content"></ngx-prism>
           </mat-tab>
           <mat-tab label="TypeScript" *ngIf="code.ts">
             <div>
-            <div class="bd-clipboard">
-              <button mat-icon-button (click)="copyToClipboard(code.ts.content)" class="btn-clipboard" title="" data-original-title="Copy to clipboard">
-                <mat-icon class="md-24 copy_code">file_copy</mat-icon>
-              </button>
+              <div class="bd-clipboard">
+                <button mat-icon-button (click)="copyToClipboard(code.ts.content)" class="btn-clipboard" title="" data-original-title="Copy to clipboard">
+                  <mat-icon class="md-24 copy_code">file_copy</mat-icon>
+                </button>
+              </div>
             </div>
-          </div>
             <ngx-prism [language]="'javascript'" [code]="code.ts.content"></ngx-prism>
           </mat-tab>
           <mat-tab label="Service" *ngIf="code.service">
-              <div>
+            <div>
               <div class="bd-clipboard">
                 <button mat-icon-button (click)="copyToClipboard(code.service.content)" class="btn-clipboard" title="" data-original-title="Copy to clipboard">
                   <mat-icon class="md-24 copy_code">file_copy</mat-icon>
                 </button>
               </div>
             </div>
-              <ngx-prism [language]="'javascript'" [code]="code.service.content"></ngx-prism>
+            <ngx-prism [language]="'javascript'" [code]="code.service.content"></ngx-prism>
           </mat-tab>
           <mat-tab label="CSS" *ngIf="code.css">
             <div class="bd-clipboard">
