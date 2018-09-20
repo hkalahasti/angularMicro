@@ -376,6 +376,9 @@ html {
   // mat-tab-group mat-tab-group mat-tab-header, mat-tab-group.top_header_tab mat-tab-group mat-tab-header .mat-tab-labels{
   //   background: rgba(0, 0, 0, 0.03) !important;
   // }
+  .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+    background: #fc7d2a !important;
+  }
   .mat-tab-body.mat-tab-body-active{
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -445,9 +448,10 @@ html {
   }
   .dashboard_card .box_img_sec{
     padding: 24px 24px 0 24px;
-    background: #40557d;
+    // background: #40557d;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    opacity: 0.9;
   }
   .dashboard_card .box_img_sec svg{
     color:#fff;
@@ -462,7 +466,7 @@ html {
   .dashboard_card .box_title{
     padding: 10px 0px 10px 0px;
     border-top: 1px solid rgba(255,255,255,0.2);
-    background: #2e4269;
+    // background: #2e4269;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
   }
