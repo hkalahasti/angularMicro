@@ -29,7 +29,7 @@ export class FileFlatNode {
 const TREE_DATA = JSON.stringify({
   BasicComponents: {
     'accordian': 'accordian',
-    'carousel': 'carousel',
+    
     'breadcrumb': 'breadcrumb',
     'calender' : 'calender',
     'notification': 'notification',
@@ -44,6 +44,7 @@ const TREE_DATA = JSON.stringify({
     'progressbar': 'progressbar',
     'switch': 'switch',
     'toast': 'toast',
+    'carousel': 'carousel',
     'sliders': 'sliders',
     'dualslider': 'dualslider',
     'messagebox': 'messagebox',

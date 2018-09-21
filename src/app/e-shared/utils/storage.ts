@@ -1,9 +1,8 @@
 /** Storage  */
 export class Storage {
 
-    static pid: string = 'DLTECH';
     static setLocalItem(key: string, val: any) {
-        key = this.pid + '-' + key;
+        key =  key;
         if (val) {
             if (typeof val === 'object') {
                 val = JSON.stringify(val);
@@ -13,7 +12,7 @@ export class Storage {
 
     }
     static getLocalItem(key: string) {
-        key = this.pid + '-' + key;
+        key =  key;
         let val: string = localStorage.getItem(key);
         if (val) {
             if (val.indexOf("{") > -1) {
@@ -27,11 +26,11 @@ export class Storage {
         }
     }
     static removeLocalItem(key: string) {
-        key = this.pid + '-' + key;
+        key =   key;
         localStorage.removeItem(key);
     }
     static setSessionItem(key: string, val: any) {
-        key = this.pid + '-' + key;
+        key =   key;
 
         if (val) {
             if (typeof val === 'object') {
@@ -48,7 +47,7 @@ export class Storage {
     }
 
     static getSessionItem(key: string): any {
-        key = this.pid + '-' + key;
+        key =   key;
         let val: string = window.sessionStorage.getItem(key);
         if (val) {
             if (val.indexOf("{") > -1) {
@@ -62,7 +61,7 @@ export class Storage {
         }
     }
     static removeSessionItem(key: string) {
-        key = this.pid + '-' + key;
+        key =   key;
         sessionStorage.removeItem(key);
     }
     static sessionClear() {
@@ -72,11 +71,11 @@ export class Storage {
 
     static setJWT(val: string) {
         if (val) {
-            sessionStorage.setItem(this.pid + '-jwt', val);
+            sessionStorage.setItem( '-jwt', val);
         }
     }
     static getJWT() {
-        return sessionStorage.getItem(this.pid + '-jwt');
+        return sessionStorage.getItem( '-jwt');
     }
     static setSessionUser(val: string) {
         if (val) {
