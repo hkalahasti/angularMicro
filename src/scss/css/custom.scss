@@ -499,7 +499,7 @@ html {
   width: 100%;
   text-align: center;
 }
-mat-card.pointer.dashboard_card.mat-card.ng-tns-c10-1.ng-star-inserted:hover {
+mat-card.pointer.dashboard_card.mat-card:hover {
   background:#fd9450;
   -webkit-transform: scale(1.03);
   transform: scale(1.03);
@@ -545,8 +545,19 @@ mat-toolbar.top_header{
     position: relative;
   }
  
-  
- 
+  .docs-api-module-import{
+    background:black;
+    font-family: 'Roboto Mono',monospace;
+    padding: 3px;
+    display:inline-block;
+  }
+  .docs-markdown-code {
+    background: rgba(0,0,0,.09);
+    padding: 3px;
+}
+  .docs-api-module-import code {
+    color:white;
+  }
   
   @media (max-width: 768px) {
     .col-lg-2 {
