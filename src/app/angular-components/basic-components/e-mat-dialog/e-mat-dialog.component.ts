@@ -1,6 +1,10 @@
 import { NgModule, Component, Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
+
+import {Code} from './code';
+import {EShareDataService} from '../../../e-shared/e-sharedata.service'
+
 @Component({
   selector: 'e-mat-dialog',
   templateUrl: './e-mat-dialog.component.html',
@@ -11,8 +15,13 @@ export class EMatDialogComponent {
 
   animal: string;
   name: string;
+  code:any;
+  constructor(public dialog: MatDialog, private eShareDataService : EShareDataService) { }
+  ngOnInit() {
+    this.code = Code;
+    this.eShareDataService.pushCode(this.code);
+  }
 
-  constructor(public dialog: MatDialog) {}
 
   openDialog(): void {
     let dialogRef = this.dialog.open(EMatDialogPopupComponent, {

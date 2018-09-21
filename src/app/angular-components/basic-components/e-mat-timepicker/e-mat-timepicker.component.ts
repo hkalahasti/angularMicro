@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import {Code} from './code';
+import {EShareDataService} from '../../../e-shared/e-sharedata.service';
+
 @Component({
   selector: 'e-mat-timepicker',
   templateUrl: './e-mat-timepicker.component.html',
@@ -7,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EMatTimepickerComponent implements OnInit {
 
-  constructor() { }
-
+  code:any;
+  constructor(private eShareDataService : EShareDataService) { }
   ngOnInit() {
+    this.code = Code;
+    this.eShareDataService.pushCode(this.code);
   }
 
 }

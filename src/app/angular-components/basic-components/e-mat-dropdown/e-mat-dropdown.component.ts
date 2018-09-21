@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+
+import {Code} from './code';
+import {EShareDataService} from '../../../e-shared/e-sharedata.service'
+
 export interface Food {
   value: string;
   viewValue: string;
@@ -14,9 +18,11 @@ export class EMatDropdownComponent implements OnInit {
     {value: 'pizza-1', viewValue: 'Pizza'},
     {value: 'tacos-2', viewValue: 'Tacos'}
   ];
-  constructor() { }
-
+  code:any;
+  constructor(private eShareDataService : EShareDataService) { }
   ngOnInit() {
+    this.code = Code;
+    this.eShareDataService.pushCode(this.code);
   }
 
 }

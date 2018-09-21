@@ -2,6 +2,10 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { CalendarComponent } from 'ng-fullcalendar';
 import { Options } from 'fullcalendar';
 import { EventSesrvice } from './events.service';
+
+import {Code} from './code';
+import {EShareDataService} from '../../../e-shared/e-sharedata.service';
+
 @Component({
   selector: 'app-e-calender',
   templateUrl: './e-calender.component.html',
@@ -10,10 +14,16 @@ import { EventSesrvice } from './events.service';
 export class ECalenderComponent implements OnInit {
   calendarOptions: Options;
   displayEvent: any;
+  code:any;
+  
   @ViewChild(CalendarComponent) ucCalendar: CalendarComponent;
-  constructor(protected eventService: EventSesrvice) { }
+  constructor(private eShareDataService : EShareDataService, protected eventService: EventSesrvice) { }
 
   ngOnInit() {
+
+    this.code = Code;
+    this.eShareDataService.pushCode(this.code);
+
     this.eventService.getEvents().subscribe(data => {
       this.calendarOptions = {
         editable: true,

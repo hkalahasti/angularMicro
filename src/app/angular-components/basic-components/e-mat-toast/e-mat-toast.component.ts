@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {MatSnackBar} from '@angular/material';
+import { MatSnackBar } from '@angular/material';
+
+import { Code } from './code';
+import { EShareDataService } from '../../../e-shared/e-sharedata.service';
 
 @Component({
   selector: 'e-mat-toast',
@@ -8,15 +11,19 @@ import {MatSnackBar} from '@angular/material';
 })
 export class EMatToastComponent implements OnInit {
 
-    constructor(public snackBar: MatSnackBar) {}
+  code: any;
+  constructor(private eShareDataService: EShareDataService, public snackBar: MatSnackBar) { }
 
-    openSnackBar(message: string, action: string) {
-      this.snackBar.open(message, action, {
-        duration: 2000,
-      });
-    }
 
   ngOnInit() {
+    this.code = Code;
+    this.eShareDataService.pushCode(this.code);
   }
+  openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action, {
+      duration: 2000,
+    });
+  }
+
 
 }

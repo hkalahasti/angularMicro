@@ -11,21 +11,7 @@ export const Code = {
   },
   ts: {
     content: `
-  event: {
-      id: model.event.id,
-      start: model.event.start,
-      end: model.event.end,
-      title: model.event.title
-      // other params
-    },
-    duration: {
-      _data: model.duration._data
-      }
-    }
-    this.displayEvent = model;
-    }
-      
-  }import { Component, OnInit, ViewChild } from '@angular/core';
+  import { Component, OnInit, ViewChild } from '@angular/core';
   import { CalendarComponent } from 'ng-fullcalendar';
   import { Options } from 'fullcalendar';
   import { EventSesrvice } from './events.service';
@@ -87,9 +73,8 @@ export const Code = {
       this.displayEvent = model;
     }
   
-  }
-        
-      `,
+  }     
+  `,
   language: 'javascript'
 },
   css: {

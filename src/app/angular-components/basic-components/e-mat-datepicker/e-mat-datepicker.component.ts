@@ -1,17 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 
+import {Code} from './code';
+import {EShareDataService} from '../../../e-shared/e-sharedata.service'
+
 @Component({
   selector: 'e-mat-datepicker',
   templateUrl: './e-mat-datepicker.component.html',
   styleUrls: ['./e-mat-datepicker.component.scss']
 })
 export class EMatDatePickerComponent implements OnInit {
-
+  code:any;
   startDate : Date;
-  constructor() {
+  constructor(private eShareDataService : EShareDataService) {
     this.startDate = new Date();
    }
-
-  ngOnInit() {
+   ngOnInit() {
+    this.code = Code;
+    this.eShareDataService.pushCode(this.code);
   }
 }

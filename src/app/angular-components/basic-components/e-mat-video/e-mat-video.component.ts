@@ -1,5 +1,9 @@
 import { Component,  OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { DomSanitizer} from '@angular/platform-browser';
+
+import {Code} from './code';
+import {EShareDataService} from '../../../e-shared/e-sharedata.service';
+
 @Component({
   selector: 'app-e-mat-video',
   templateUrl: './e-mat-video.component.html',
@@ -7,10 +11,13 @@ import { DomSanitizer} from '@angular/platform-browser';
 })
 export class EMatVideoComponent implements OnInit {
   @Input() video;
-  constructor(private sanitizer: DomSanitizer) { }
 
+  code:any;
+  
+  constructor(private eShareDataService : EShareDataService, private sanitizer: DomSanitizer) { }
   ngOnInit() {
-    
+    this.code = Code;
+    this.eShareDataService.pushCode(this.code);
   }
   getEmbedUrl() {
     if(this.video){
