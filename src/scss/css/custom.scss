@@ -549,12 +549,28 @@ mat-toolbar.top_header{
     background:black;
     font-family: 'Roboto Mono',monospace;
     padding: 3px;
+    color: white;
     display:inline-block;
   }
   .docs-markdown-code {
     background: rgba(0,0,0,.09);
     padding: 3px;
+    color:white;
 }
+.docs-markdown-code,  .docs-api-module-import  pre {
+  display: block;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 13px;
+    line-height: 1.42857143;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #333;
+     background-color: transparent;
+    border-style: none;
+    height: auto;
+}
+
   .docs-api-module-import code {
     color:white;
   }
