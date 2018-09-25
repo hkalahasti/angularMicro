@@ -7,6 +7,10 @@ html {
     font-family: 'Open Sans', sans-serif;
     outline: none !important;
   }
+  p{
+    margin: 0;
+    padding: 0;
+  }
   
   body {
     overflow-x: hidden;
@@ -384,7 +388,7 @@ html {
     border-bottom-right-radius: 15px;
     padding-bottom: 10px;
   }
-  mat-tab-body mat-tab-body.mat-tab-body.mat-tab-body-active .mat-tab-body-content {
+  mat-tab-body mat-tab-body.mat-tab-body .mat-tab-body-content {
     padding-top: 15px;
   }
   .code_box_main{
@@ -573,6 +577,30 @@ mat-toolbar.top_header{
 
   .docs-api-module-import code {
     color:white;
+  }
+  .pannel_exp_first{
+    margin-bottom: 15px !important;
+  }
+  .pannel_exp mat-expansion-panel-header{
+    height:48px !important;
+    max-height:48px !important;
+  }
+  .pannel_exp mat-expansion-panel-header:hover{
+    background: #09254e !important;
+  }
+  .pannel_exp mat-expansion-panel-header:hover mat-panel-title, .pannel_exp mat-expansion-panel-header:hover mat-panel-description, .pannel_exp mat-expansion-panel-header:hover .mat-expansion-indicator::after{
+    color:#fff !important;
+  }
+  .pannel_exp.mat-expanded mat-expansion-panel-header{
+    background: #09254e !important;
+  }
+  .pannel_exp.mat-expanded mat-expansion-panel-header mat-panel-title, 
+  .pannel_exp.mat-expanded mat-expansion-panel-header mat-panel-description, 
+  .pannel_exp.mat-expanded mat-expansion-panel-header .mat-expansion-indicator::after{
+    color:#fff !important;
+  }
+  .pannel_exp .mat-expansion-panel-body{
+    padding-top: 15px;
   }
   
   @media (max-width: 768px) {
@@ -830,6 +858,14 @@ mat-toolbar.top_header{
   /* @media (min-width: 992px) {
    
   } */
-
+  @media only screen and (min-width: 1367px){
+    .dashboard_card{
+      // max-width: 33em !important;
+    }
+    e-dashboard{
+      left: 0;
+      right: 0;
+    }
+  }
 
   

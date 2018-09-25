@@ -1,7 +1,7 @@
 <!-- component  -->
 
 <mat-accordion>
-  <mat-expansion-panel>
+  <mat-expansion-panel class="pannel_exp_first pannel_exp">
     <mat-expansion-panel-header>
       <mat-panel-title>
         Personal data
@@ -11,7 +11,7 @@
       </mat-panel-description>
     </mat-expansion-panel-header>
 
-    <mat-form-field>
+    <mat-form-field class="m-r-15">
       <input matInput placeholder="First name">
     </mat-form-field>
 
@@ -19,7 +19,7 @@
       <input matInput placeholder="Age">
     </mat-form-field>
   </mat-expansion-panel>
-  <mat-expansion-panel [expanded]="true" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+  <mat-expansion-panel class="pannel_exp" [expanded]="true" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
     <mat-expansion-panel-header>
       <mat-panel-title>
         Self aware panel
