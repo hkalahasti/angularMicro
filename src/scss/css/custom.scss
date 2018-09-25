@@ -585,20 +585,20 @@ mat-toolbar.top_header{
     height:48px !important;
     max-height:48px !important;
   }
-  .pannel_exp mat-expansion-panel-header:hover{
-    background: #09254e !important;
-  }
-  .pannel_exp mat-expansion-panel-header:hover mat-panel-title, .pannel_exp mat-expansion-panel-header:hover mat-panel-description, .pannel_exp mat-expansion-panel-header:hover .mat-expansion-indicator::after{
-    color:#fff !important;
-  }
-  .pannel_exp.mat-expanded mat-expansion-panel-header{
-    background: #09254e !important;
-  }
-  .pannel_exp.mat-expanded mat-expansion-panel-header mat-panel-title, 
-  .pannel_exp.mat-expanded mat-expansion-panel-header mat-panel-description, 
-  .pannel_exp.mat-expanded mat-expansion-panel-header .mat-expansion-indicator::after{
-    color:#fff !important;
-  }
+  // .pannel_exp mat-expansion-panel-header:hover{
+  //   background: #09254e !important;
+  // }
+  // .pannel_exp mat-expansion-panel-header:hover mat-panel-title, .pannel_exp mat-expansion-panel-header:hover mat-panel-description, .pannel_exp mat-expansion-panel-header:hover .mat-expansion-indicator::after{
+  //   color:#fff !important;
+  // }
+  // .pannel_exp.mat-expanded mat-expansion-panel-header{
+  //   background: #09254e !important;
+  // }
+  // .pannel_exp.mat-expanded mat-expansion-panel-header mat-panel-title, 
+  // .pannel_exp.mat-expanded mat-expansion-panel-header mat-panel-description, 
+  // .pannel_exp.mat-expanded mat-expansion-panel-header .mat-expansion-indicator::after{
+  //   color:#fff !important;
+  // }
   .pannel_exp .mat-expansion-panel-body{
     padding-top: 15px;
   }
