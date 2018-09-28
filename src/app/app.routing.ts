@@ -15,7 +15,7 @@ import {
   EMatMessageboxComponent, EMatNavigationComponent,EMatAutocompleteComponent,EMatAccordianComponent, EMatNotificationComponent,
   EMatMapComponent,
   EMatVideoComponent,EMatDropdownComponent, ECalenderComponent,EDualRangeSliderComponent
-} from './angular-components/basic-components/index';
+} from './angular-components/index';
 
 
 

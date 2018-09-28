@@ -1,7 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { ESharedModule } from '../../e-shared/e-shared.module';
+import { ESharedModule } from '../e-shared/e-shared.module';
 import {
   EMatDatePickerComponent, EMatTimepickerComponent,
   EMatSpinnerComponent, EMatTabsComponent,
@@ -17,7 +17,7 @@ import {
 } from './index';
 
 
-import {EventSesrvice} from './e-calender/events.service'
+import {EventSesrvice} from './basic-components/e-calender/events.service'
 
 
 
